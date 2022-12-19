@@ -17,7 +17,7 @@ namespace Jalasoft.Devlvl1.Practica2
         protected string? Color { get; set; }
         protected double Weight { get; set; }
 
-        protected virtual void Shoot(Target target)
+        public virtual void Shoot(Target target)
         {
             CurrentBullets--;
 
@@ -37,14 +37,14 @@ namespace Jalasoft.Devlvl1.Practica2
             }
         }
 
-        protected void Reload()
+        public void Reload()
         {
             CurrentBullets = MagazineCapacity;
             NeedsToReload = false;
             Console.WriteLine("Magazine filled");
         }
 
-        protected void Reload(int numberOfBullets)
+        public void Reload(int numberOfBullets)
         {
             if(numberOfBullets <= MagazineCapacity - CurrentBullets)
             {
