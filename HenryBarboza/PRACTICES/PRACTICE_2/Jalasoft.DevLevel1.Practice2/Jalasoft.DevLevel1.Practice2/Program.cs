@@ -37,10 +37,8 @@ Console.Clear();
 Console.WriteLine("Press enter to continue to the next weapon");
 Console.ReadKey();
 
-//// SniperRifle
-//Console.WriteLine("------------------------------");
-//SniperRifle srWeapon = new SniperRifle();
-Console.WriteLine("\n#################### SHOT GUN ####################");
+// SniperRifle
+Console.WriteLine("\n#################### SNIPER RIFLE ####################");
 SniperRifle srWeapon = new SniperRifle("IOS", "Sniper Rifle", "Blue", 60, false);
 Console.WriteLine(" ____________________________________");
 Console.WriteLine("|            DETAILS                 |");
