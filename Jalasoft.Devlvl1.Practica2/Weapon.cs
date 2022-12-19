@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Jalasoft.Devlvl1.Practica2
 {
-    protected class Weapon
+    public class Weapon
     {
         protected int MagazineCapacity { get; set; }
         protected int Range { get; set; }
@@ -17,12 +17,12 @@ namespace Jalasoft.Devlvl1.Practica2
         protected string? Color { get; set; }
         protected double Weight { get; set; }
 
-        protected virtual void Shoot(Target)
+        protected virtual void Shoot(Target target)
         {
             CurrentBullets--;
 
             Console.WriteLine("Weapon Shooted!...");
-            if(Target.Distance <= Range)
+            if(target.Distance <= Range)
             {
                 Console.WriteLine("Target reached");
             }

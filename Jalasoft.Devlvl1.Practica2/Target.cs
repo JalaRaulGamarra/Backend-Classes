@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Jalasoft.Devlvl1.Practica2
 {
-    internal class Target
+    public class Target
     {
+        public int Distance { get; set; }
+        public bool Reached { get; set; }
+        public Target(int distance) {
+            Distance = distance;
+            Reached = false;
+        }
     }
 }
