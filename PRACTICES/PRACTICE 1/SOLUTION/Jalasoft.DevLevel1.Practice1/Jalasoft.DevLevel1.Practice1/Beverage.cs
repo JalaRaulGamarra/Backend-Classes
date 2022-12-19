@@ -1,6 +1,6 @@
 ﻿namespace Jalasoft.DevLevel1.Practice1
 {
-    public class Beverage
+    public struct Beverage
     {
         private double winePrice = 9;
         private double beerPrice = 7.5;
