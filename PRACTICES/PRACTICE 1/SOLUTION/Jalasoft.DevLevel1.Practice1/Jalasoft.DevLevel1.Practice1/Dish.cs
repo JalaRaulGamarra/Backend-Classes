@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Jalasoft.DevLevel1.Practice1
 {
-    internal class Dish
+    internal struct Dish
     {
         private double pizzaPrice = 8;
         private double lasagnaPrice = 12.99;

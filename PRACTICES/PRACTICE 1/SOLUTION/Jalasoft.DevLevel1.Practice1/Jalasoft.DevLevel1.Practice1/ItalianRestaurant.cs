@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Jalasoft.DevLevel1.Practice1
 {
-    internal class ItalianRestaurant
+    internal struct ItalianRestaurant
     {
         public int lastOrder;
         public Queue<Order> orders;

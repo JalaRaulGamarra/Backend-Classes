@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Jalasoft.DevLevel1.Practice1
 {
-    internal class Order
+    internal struct Order
     {
         public string Customer { get; set; }
         public int OrderNumber { get; set; }
