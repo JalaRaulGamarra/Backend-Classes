@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace Jalasoft.Devlvl1.Practica2
 {
-    internal class ShootGun : RechargeableWeapon
+    internal class SniperRifle : RechargeableWeapon
     {
-        protected bool Lantern { get; set; }
-        public ShootGun(ShotGunProperties props) {
+        protected bool TelescopicSight { get; set; }
+        public SniperRifle(SniperRifleProperties props)
+        {
 
             MagazineCapacity = props.MagazineCapacity;
             Range = props.Range;
@@ -23,7 +22,7 @@ namespace Jalasoft.Devlvl1.Practica2
 
             NeedsToReload = true;
             NeedsRecharge = false;
-            Lantern= false;
+            TelescopicSight = false;
         }
     }
 }
