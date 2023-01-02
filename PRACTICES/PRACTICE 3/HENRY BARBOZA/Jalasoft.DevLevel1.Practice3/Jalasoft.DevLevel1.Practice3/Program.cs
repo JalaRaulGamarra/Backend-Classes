@@ -27,7 +27,11 @@ bookManager.ListBooks();
 // Lend book
 Console.WriteLine("\nLending books");
 bookManager.LendBook(comic, "Pepe");
+// Lending unavailable book
 bookManager.LendBook(comic, "Ronaldo");
 bookManager.LendBook(novel, "Messi");
+
+// List book
+Console.WriteLine("\nListing books");
 bookManager.ListBooks();
 
