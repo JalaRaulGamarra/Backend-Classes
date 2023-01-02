@@ -19,7 +19,7 @@ bookManager.LendBook(novel, "Miguel Ramirez");
 //Intentamos prestar el libro de nuevo, lo que lanzaría una excepción
 try
 {
-    bookManager.LendBook(novel, "John Doe");
+    bookManager.LendBook(novel, "Miguel Ramirez");
 }
 catch (Exception ex)
 {
