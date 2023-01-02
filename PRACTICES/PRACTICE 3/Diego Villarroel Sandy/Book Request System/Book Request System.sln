@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Book Request System", "Book Request System\Book Request System.csproj", "{4C6B77F3-1591-43F9-B4CB-A0955A3731E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C6B77F3-1591-43F9-B4CB-A0955A3731E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C6B77F3-1591-43F9-B4CB-A0955A3731E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C6B77F3-1591-43F9-B4CB-A0955A3731E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C6B77F3-1591-43F9-B4CB-A0955A3731E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {701B5B60-C00A-4E8B-84E5-1F4C4716AFA2}
+	EndGlobalSection
+EndGlobal
