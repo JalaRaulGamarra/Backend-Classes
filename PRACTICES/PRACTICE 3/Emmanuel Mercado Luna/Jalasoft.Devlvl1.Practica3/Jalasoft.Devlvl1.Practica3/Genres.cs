@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace Jalasoft.Devlvl1.Practica3
 {
-    public enum Language
+    public enum Genres
     {
-        English,
-        French,
-        Spanish,
-        Dutch
+        Action,
+        Drama,
+        Romance
     }
 }

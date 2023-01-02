@@ -8,7 +8,7 @@ namespace Jalasoft.Devlvl1.Practica3
 {
     internal class Library
     {
-        internal List<Book> Booklist;
+        public List<Book> Booklist;
         public Library()
         {
             Booklist = new List<Book>();
@@ -16,9 +16,9 @@ namespace Jalasoft.Devlvl1.Practica3
 
         public void ShowBooks()
         {
-            for (int i = 0; i < BookList.Count; i++)
+            foreach (Book book in Booklist)
             {
-
+                Console.WriteLine($"Book name: {book.Name}");
             }
         }
     }
