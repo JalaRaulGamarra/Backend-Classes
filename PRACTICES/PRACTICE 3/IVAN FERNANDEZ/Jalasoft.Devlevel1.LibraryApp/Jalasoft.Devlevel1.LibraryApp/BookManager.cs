@@ -8,54 +8,43 @@ namespace Jalasoft.Devlevel1.BookRequestSystem
 {
     internal class BookManager
     {
-        private List<Book> novels;
-        private List<Book> essays;
-        private List<Book> comics;
+        private List<Book> novels = new List<Book>();
+        private List<Book> essays = new List<Book>();
+        private List<Book> comics = new List<Book>();
 
         public void AddBook(Book book)
         {
-            switch (book.GetType().ToString())
-            {
-                case "Novel":
-                    novels.Add(book); break;
-                case "Essay":
-                    essays.Add(book); break;
-                case "Comic":
-                    comics.Add(book); break;
-                default:
-                    break;
-            }
-            book.Avalaible = true;
+            if (book.GetType() == typeof(Novel)) novels.Add(book);
+            else if (book.GetType() == typeof(Essay)) essays.Add(book);
+            else if (book.GetType() == typeof(Comic)) comics.Add(book);
+            book.Available = true;
+            book.LibraryCode = Book.LibraryCodeAsigner.ToString();
+            Book.LibraryCodeAsigner += 1;
+            book.AddBookInfo();
         }
         public void RemoveBook(Book book)
         {
-            switch (book.GetType().ToString())
-            {
-                case "Novel":
-                    novels.Remove(book); break;
-                case "Essay":
-                    essays.Remove(book); break;
-                case "Comic":
-                    comics.Remove(book); break;
-                default:
-                    break;
-            }
+            if (book.GetType() == typeof(Novel)) novels.Remove(book);
+            else if (book.GetType() == typeof(Essay)) essays.Remove(book);
+            else if (book.GetType() == typeof(Comic)) comics.Remove(book);
+            book.Available = false;
+            book.RemoveInfo();
         }
         public void LendBook(Book book, string lenderName)
         {
-            if (book.Avalaible)
+            if (book.Available)
             {
-                book.Avalaible = false;
+                book.Available = false;
                 book.LenderName = lenderName;
                 book.LendInfo();
             }
             else Console.WriteLine("the book is not available");
         }
-        public void returnBook(Book book)
+        public void ReturnBook(Book book)
         {
-                book.Avalaible = true;
-                book.LenderName = null;
-                Console.WriteLine("the book was returned");
+            book.Available = true;
+            book.LenderName = null;
+            book.ReturnInfo();
         }
     }
 }

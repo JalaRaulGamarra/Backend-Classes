@@ -18,10 +18,12 @@ namespace Jalasoft.DevLevel1.Practice3
             Type type = book.GetType();
             if (type.Equals(typeof(Comic))) {
                 ComicList.Add(book);
-            } else if(type.Equals(typeof(Essay)))
+            } 
+            else if (type.Equals(typeof(Essay)))
             {
                 EssayList.Add(book);
-            } else if (type.Equals(typeof(Novel)))
+            } 
+            else if (type.Equals(typeof(Novel)))
             {
                 NovelList.Add(book);
             }

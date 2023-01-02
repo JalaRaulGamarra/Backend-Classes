@@ -8,32 +8,37 @@ namespace Jalasoft.Devlevel1.BookRequestSystem
 {
     public abstract class Book
     {
+        public static int LibraryCodeAsigner = 0;    
+
         public readonly string Author;
         public readonly string Name;
-        public string LibraryCode { get; set; }
         public readonly string Genre;
         public readonly string Languaje;
-        public string Status { get; set; }
-        public string? LenderName { get; set; }
         public readonly double PriceOfPurchase;
         public readonly string ISBNNumber;
-        public bool Avalaible { get; set; }
 
-        public Book(string author, string name, string libraryCode, string genre, string languaje, double priceOfPurchase, string iSBNNumber)
+        public string LibraryCode { get; set; }
+        public string Status { get; set; }
+        public string? LenderName { get; set; }
+        public bool Available { get; set; }
+
+        public Book(string author, string name, string genre, string languaje, double priceOfPurchase, string iSBNNumber)
         {
             Author = author;
             Name = name;
-            LibraryCode = libraryCode;
             Genre = genre;
             Languaje = languaje;
             Status = "new";
             LenderName = null;
             PriceOfPurchase = priceOfPurchase;
             ISBNNumber = iSBNNumber;
-            Avalaible = true;
+            Available = false;
         }
 
-        public abstract void LendInfo(); 
+        public abstract void LendInfo();
+        public abstract void RemoveInfo();
+        public abstract void ReturnInfo();
+        public abstract void AddBookInfo();
 
     }
 }
