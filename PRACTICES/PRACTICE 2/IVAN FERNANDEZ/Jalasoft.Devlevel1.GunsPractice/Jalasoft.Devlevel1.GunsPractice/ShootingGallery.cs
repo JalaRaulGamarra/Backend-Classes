@@ -16,7 +16,7 @@ namespace Jalasoft.Devlevel1.GunsPractice
             shotgun = new Shotgun("brand2", "shotgun1", "brown", 4.2);
             machineGun = new MachineGun("brand3", "machinegun1","black",5.00);
         }
-        public void SniperRifleShootingSimulation()
+        internal void SniperRifleShootingSimulation()
         {
             Console.WriteLine("-SniperRifle shooting:");
             sniperRifle.shootATarget(105);
