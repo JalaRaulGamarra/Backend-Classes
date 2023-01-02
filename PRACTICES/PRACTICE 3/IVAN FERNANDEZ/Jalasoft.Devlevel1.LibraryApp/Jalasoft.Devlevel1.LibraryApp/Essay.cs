@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace Jalasoft.Devlevel1.BookRequestSystem
 {
-    internal class Essay : Book
+    internal class Essay : Book, IReviewable
     {
+        public string? Reviewer { get; set; }
+        public EssayStatus? essayStatus { get; set; }
+
+
         public Essay(string author, string name, string genre, string languaje, double priceOfPurchase, string iSBNNumber) : base(author, name, genre, languaje, priceOfPurchase, iSBNNumber)
         {
         }
@@ -27,6 +31,13 @@ namespace Jalasoft.Devlevel1.BookRequestSystem
         public override void ReturnInfo()
         {
             Console.WriteLine($"The Essay '{this.LibraryCode} - {this.Name}' was returnd to library so it is now Available");
+        }
+
+        public void ReviewEssay(string reviewer, EssayStatus status)
+        {
+            this.Reviewer = reviewer;
+            this.essayStatus= status;
+            Console.WriteLine($"The essay was Review by {this.Reviewer} with a {this.essayStatus}");
         }
     }
 }
