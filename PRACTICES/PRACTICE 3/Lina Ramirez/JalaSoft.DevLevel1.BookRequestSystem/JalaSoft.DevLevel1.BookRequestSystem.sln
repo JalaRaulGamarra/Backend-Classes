@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JalaSoft.DevLevel1.BookRequestSystem", "JalaSoft.DevLevel1.BookRequestSystem\JalaSoft.DevLevel1.BookRequestSystem.csproj", "{64B388E8-33CF-4BC8-BA57-2FEDCA5F165A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64B388E8-33CF-4BC8-BA57-2FEDCA5F165A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64B388E8-33CF-4BC8-BA57-2FEDCA5F165A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64B388E8-33CF-4BC8-BA57-2FEDCA5F165A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64B388E8-33CF-4BC8-BA57-2FEDCA5F165A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A3EA8466-B4FD-44DA-9F9D-EE8E05258DA0}
+	EndGlobalSection
+EndGlobal
