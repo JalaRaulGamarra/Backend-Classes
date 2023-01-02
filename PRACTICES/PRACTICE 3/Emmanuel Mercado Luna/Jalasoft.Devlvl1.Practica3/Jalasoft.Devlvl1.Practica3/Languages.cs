@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Jalasoft.Devlvl1.Practica3
 {
-    public enum LenderName
+    public enum Languages
     {
-        Jessica,
-        Jorge,
-        August
+        English,
+        French,
+        Spanish,
+        Dutch
     }
 }

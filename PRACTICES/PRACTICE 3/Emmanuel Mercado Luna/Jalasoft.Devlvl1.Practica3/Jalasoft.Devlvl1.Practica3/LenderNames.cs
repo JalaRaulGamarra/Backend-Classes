@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Jalasoft.Devlvl1.Practica3
 {
-    public enum Genre
+    public enum LenderNames
     {
-        Action,
-        Drama,
-        Romance
+        Jessica,
+        Jorge,
+        August
     }
 }
