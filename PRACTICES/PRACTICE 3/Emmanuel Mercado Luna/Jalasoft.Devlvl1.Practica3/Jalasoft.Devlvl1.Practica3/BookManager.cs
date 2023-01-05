@@ -9,31 +9,44 @@ namespace Jalasoft.Devlvl1.Practica3
     internal class BookManager
     {
         public Library MyLibrary;
-        public string LenderName;
-        public BookManager(Library library, string lenderName) {
+        public LenderNames LenderName;
+        public BookManager(Library library, LenderNames lenderName) {
             this.MyLibrary = library;
             this.LenderName = lenderName;
         }
 
-        public void Lend(Book book)
-        {            
-            Console.WriteLine("Book Lended");
-        }
 
         public void Add(Book book)
         {
+            book.LibraryCode = MyLibrary.Code;
             MyLibrary.Booklist.Add(book);
-            Console.WriteLine("Book Added");
+            MyLibrary.Code++;
+            Console.WriteLine($"Book Added: \"{book.Name}\" with a Library code:{book.LibraryCode}");
+        }
+        public void Lend(Book book)
+        {
+            if (book.Status)
+            {
+                book.Status = false;
+                Console.WriteLine($"Book \"{book.Name}\" was lended by manager {Enum.GetName(typeof(LenderNames), this.LenderName)}");
+            }
+            else
+            {
+                Console.WriteLine($"The book \"{book.Name}\" was already lended, try with another, please");
+            }
+        }
+        public void Return(Book book) 
+        {
+            book.Status = true;
+            Console.WriteLine($"Book \"{book.Name}\" was returned to manager {Enum.GetName(typeof(LenderNames), this.LenderName)}");
         }
 
         public void Remove(Book book)
         {
-            Console.WriteLine("Book Removed");
+            var selectedBook = MyLibrary.Booklist.Find(x => x.LibraryCode == book.LibraryCode);
+            MyLibrary.Booklist.Remove(selectedBook);            
+            Console.WriteLine($"Book \"{book.Name}\" was removed.");
         }
 
-        public void Return() 
-        {
-            Console.WriteLine("Book Returned");
-        }
     }
 }

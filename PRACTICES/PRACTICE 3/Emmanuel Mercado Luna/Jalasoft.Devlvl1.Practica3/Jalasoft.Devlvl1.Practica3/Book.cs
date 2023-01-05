@@ -12,14 +12,14 @@ namespace Jalasoft.Devlvl1.Practica3
     {
         public readonly string Author;
         public readonly string Name;
-        public readonly ushort LibraryCode;
-        public readonly string Genre;
-        public readonly string Language;
+        internal ushort LibraryCode { get; set; }
+        public readonly Genres Genre;
+        public readonly Languages Language;
         internal bool Status { set; get; }
-        internal string? LenderName { set; get; }
-        public readonly float PriceOfPurchase;
+        internal LenderNames LenderName { set; get; }
+        internal float PriceOfPurchase;
         public readonly long ISBN;
-        public Book(string author, string name, string genre, string language, float priceOfPurchase, long ISBN)
+        public Book(string author, string name, Genres genre, Languages language, float priceOfPurchase, long ISBN)
         {
             Author = author;
             Name = name;
