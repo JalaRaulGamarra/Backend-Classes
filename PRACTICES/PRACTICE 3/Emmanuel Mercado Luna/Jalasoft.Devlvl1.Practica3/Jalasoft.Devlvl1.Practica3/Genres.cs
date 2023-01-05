@@ -10,6 +10,7 @@ namespace Jalasoft.Devlvl1.Practica3
     {
         Action,
         Drama,
-        Romance
+        Romance,
+        Philosophy
     }
 }
