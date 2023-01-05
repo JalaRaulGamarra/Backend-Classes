@@ -1,6 +1,6 @@
-﻿namespace Jalasoft.DevLEvel1.Practice03
+namespace Jalasoft.DevLEvel1.Practice03
 {
-    public class Book
+    public abstract class Book
     {
         public string author;
         public string name;
