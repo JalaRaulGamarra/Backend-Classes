@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Jalasoft.DevLvl1.Practice4
 {
-    internal class Operation
+    public class Operation
     {
         public int Amount { get; set; }
         public OperationTypes Type { get; set; }

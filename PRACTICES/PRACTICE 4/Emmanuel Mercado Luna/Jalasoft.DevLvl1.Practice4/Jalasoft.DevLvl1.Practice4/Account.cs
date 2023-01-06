@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Jalasoft.DevLvl1.Practice4
 {
-    internal class Account : IAccount
+    public class Account : IAccount
     {
-        private int AccountBalance;
+        public int AccountBalance { get; private set; }
         private List<Operation> Operations;
 
         public Account(int accountBalance)
@@ -17,12 +17,12 @@ namespace Jalasoft.DevLvl1.Practice4
             Operations = new List<Operation>();
         }
 
-        public void Deposit(int amount, string reference)
+        public void Deposit(Operation operation)
         {
-            AccountBalance += amount;
-            Operation deposit = new Operation(amount, OperationTypes.Deposit, reference);
-            Operations.Add(deposit);
-            Console.WriteLine($"Deposit of {amount} $ succesful");
+            AccountBalance += operation.Amount;            
+            Operations.Add(operation);
+            Console.WriteLine($"Deposit of {operation.Amount} $ succesful");
+            Console.WriteLine($"Reference: {operation.Comment}");
         }
 
         public void ShowBalance()
@@ -32,18 +32,29 @@ namespace Jalasoft.DevLvl1.Practice4
 
         public void ShowOperations()
         {
-
+            int count = 1;
+            foreach(var item in Operations)
+            {
+                Console.WriteLine($"({count}) Type: {Enum.GetName(typeof(OperationTypes),item.Type)} | Amount: {item.Amount} $");
+                count++;
+            }
         }
 
         public void ShowOperations(int limit)
         {
-            throw new NotImplementedException();
+            var query = Operations.Where(operation => operation.Amount > limit);
+            int count = 1;
+            foreach (var item in query)
+            {
+                Console.WriteLine($"({count}) Type: {Enum.GetName(typeof(OperationTypes), item.Type)} | Amount: {item.Amount} $");
+                count++;
+            }
         }
 
-        public void WithDraw(int amount)
+        public void WithDraw(Operation operation)
         {
-            AccountBalance -= amount;
-            Console.WriteLine($"You withdraw the amount of \"{amount}\"$ from your account");
+            AccountBalance -= operation.Amount;
+            Console.WriteLine($"You withdraw the amount of \"{operation.Amount}\"$ from your account");
         }
     }
 }

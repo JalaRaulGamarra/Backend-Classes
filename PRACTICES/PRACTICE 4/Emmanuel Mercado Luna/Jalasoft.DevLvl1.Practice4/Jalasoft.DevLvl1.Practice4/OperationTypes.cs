@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Jalasoft.DevLvl1.Practice4
 {
-    enum OperationTypes
+    public enum OperationTypes
     {
         WithDraw,
         Deposit

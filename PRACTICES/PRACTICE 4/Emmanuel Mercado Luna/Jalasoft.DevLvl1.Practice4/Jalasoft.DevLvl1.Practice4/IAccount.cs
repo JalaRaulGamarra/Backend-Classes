@@ -8,8 +8,8 @@ namespace Jalasoft.DevLvl1.Practice4
 {
     internal interface IAccount
     {
-        void Deposit(int amount, string reference);
-        void WithDraw(int amount);
+        void Deposit(Operation operation);
+        void WithDraw(Operation operation);
         void ShowOperations();
         void ShowOperations(int limit);
         void ShowBalance();
