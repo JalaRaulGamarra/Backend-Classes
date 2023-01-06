@@ -14,5 +14,3 @@ Console.WriteLine(library.AddBookToLibrary(comic));
 Console.WriteLine(library.LendBook(essay, "Dan"));
 Console.WriteLine(library.LendBook(essay, "Doyle"));
 Console.WriteLine(library.RemoveBookFromLibrary(comic));
-
-Exception
