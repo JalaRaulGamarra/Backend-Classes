@@ -4,7 +4,6 @@ using static JalaSoft.Dev.Level1.SystemATM.CustomException;
 
 Console.WriteLine("Hello, World!");
 
-
 Account myAccount = new Account();
 
 try
