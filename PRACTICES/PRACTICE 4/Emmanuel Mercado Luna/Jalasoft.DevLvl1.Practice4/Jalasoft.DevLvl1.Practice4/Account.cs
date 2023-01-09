@@ -22,38 +22,43 @@ namespace Jalasoft.DevLvl1.Practice4
             CheckAmount(operation);
             AccountBalance += operation.Amount;            
             Operations.Add(operation);
+            InterfaceDrawer.Braker();
             Console.WriteLine($"Deposit of {operation.Amount} $ succesful");
             Console.WriteLine($"Reference: {operation.Comment}");
-            DrawSeparator();
         }
 
         public void ShowBalance()
         {
+            InterfaceDrawer.Braker();
             Console.WriteLine($"The actual amount of your account is: {AccountBalance} $");
-            DrawSeparator();
         }
 
-        public void ShowOperations()
+        public void ShowOperations(OperationTypes type)
         {
             int count = 1;
-            foreach(var item in Operations)
+
+            var query = Operations.Where(operation => operation.Type == type);
+
+            InterfaceDrawer.Braker();
+            Console.WriteLine($"Operations of \"{Enum.GetName(typeof(OperationTypes), type)}\" type");
+            foreach(var item in query)
             {
                 Console.WriteLine($"({count}) Type: {Enum.GetName(typeof(OperationTypes),item.Type)} | Amount: {item.Amount} $");
                 count++;
             }
-            DrawSeparator();
         }
 
         public void ShowOperations(int limit)
         {
             var query = Operations.Where(operation => operation.Amount > limit);
             int count = 1;
+            InterfaceDrawer.Braker();
+            Console.WriteLine($"Operations greater than {limit} $");
             foreach (var item in query)
             {
                 Console.WriteLine($"({count}) Type: {Enum.GetName(typeof(OperationTypes), item.Type)} | Amount: {item.Amount} $");
                 count++;
             }
-            DrawSeparator();
         }
 
         public void WithDraw(Operation operation)
@@ -61,8 +66,8 @@ namespace Jalasoft.DevLvl1.Practice4
             CheckAmount(operation);
             AccountBalance -= operation.Amount;
             Operations.Add(operation);
+            InterfaceDrawer.Braker();
             Console.WriteLine($"You withdraw the amount of \"{operation.Amount}\"$ from your account");
-            DrawSeparator();
         }
 
         public void CheckAmount(Operation operation)
@@ -75,11 +80,6 @@ namespace Jalasoft.DevLvl1.Practice4
             {
                 throw new NegativeBalanceException("ERROR: Not enough money in account");
             }
-        }
-
-        public void DrawSeparator()
-        {
-            Console.WriteLine("|----------------------------|");
         }
     }
 }

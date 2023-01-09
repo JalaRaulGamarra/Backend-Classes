@@ -10,7 +10,7 @@ namespace Jalasoft.DevLvl1.Practice4
     {
         void Deposit(Operation operation);
         void WithDraw(Operation operation);
-        void ShowOperations();
+        void ShowOperations(OperationTypes type);
         void ShowOperations(int limit);
         void ShowBalance();
     }

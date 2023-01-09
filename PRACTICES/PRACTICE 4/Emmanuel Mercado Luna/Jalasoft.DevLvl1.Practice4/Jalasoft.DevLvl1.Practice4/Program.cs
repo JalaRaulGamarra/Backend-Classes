@@ -16,8 +16,8 @@ try
 }
 catch (NoTenMultiplierException ex)
 {
-    Console.WriteLine(ex.Message);
-    Console.WriteLine("|----------------------------|");
+    InterfaceDrawer.Braker();
+    Console.WriteLine(ex.Message);    
 }
 
 myAccount.Deposit(deposit3);
@@ -28,14 +28,16 @@ try
 }
 catch(NegativeBalanceException ex)
 {
+    InterfaceDrawer.Braker();
     Console.WriteLine(ex.Message);
-    Console.WriteLine("|----------------------------|");
 }
 
 myAccount.WithDraw(withdraw2);
 
 myAccount.ShowBalance();
 
-myAccount.ShowOperations();
+myAccount.ShowOperations(OperationTypes.Deposit);
+
+myAccount.ShowOperations(OperationTypes.WithDraw);
 
 myAccount.ShowOperations(90);
