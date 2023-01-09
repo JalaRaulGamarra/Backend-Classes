@@ -10,13 +10,13 @@ namespace Jalasoft.DevLvl1.Practice4
     {
         public int Amount { get; set; }
         public OperationTypes Type { get; set; }
-        public string? Comment { get; set; }
+        public string? Reference { get; set; }
 
         public Operation(int amount, OperationTypes type, string comment) 
         {
             Amount = amount;
             Type = type;
-            Comment = comment;
+            Reference = comment;
         }
     }
 }

@@ -24,7 +24,7 @@ namespace Jalasoft.DevLvl1.Practice4
             Operations.Add(operation);
             InterfaceDrawer.Braker();
             Console.WriteLine($"Deposit of {operation.Amount} $ succesful");
-            Console.WriteLine($"Reference: {operation.Comment}");
+            Console.WriteLine($"Ref. {operation.Reference}");
         }
 
         public void ShowBalance()
@@ -43,7 +43,7 @@ namespace Jalasoft.DevLvl1.Practice4
             Console.WriteLine($"Operations of \"{Enum.GetName(typeof(OperationTypes), type)}\" type");
             foreach(var item in query)
             {
-                Console.WriteLine($"({count}) Type: {Enum.GetName(typeof(OperationTypes),item.Type)} | Amount: {item.Amount} $");
+                Console.WriteLine($"({count}) Ref. {item.Reference} | Amount: {item.Amount} $");
                 count++;
             }
         }
