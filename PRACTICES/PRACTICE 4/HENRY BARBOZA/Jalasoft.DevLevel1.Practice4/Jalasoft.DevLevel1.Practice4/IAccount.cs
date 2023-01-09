@@ -11,7 +11,7 @@ namespace Jalasoft.DevLevel1.Practice4
         internal string Deposit(int amount);
         internal string Withdraw(int amount);
         internal string ShowOperations(int value);
-        internal string ShowOperations();
+        internal string ShowOperations(string typeOperation);
         internal string ShowBalance();
 
     }

@@ -42,10 +42,11 @@ namespace Jalasoft.DevLevel1.Practice4
             return message;
         }
 
-        public string ShowOperations()
+        public string ShowOperations(string typeOperation)
         {
-            string message = ""; 
-            foreach (Tuple<string, int> operation in operations)
+            string message = "";
+            var query = operations.Where(operation => operation.Item1 == typeOperation);
+            foreach (Tuple<string, int> operation in query)
             {
                 message += $"{operation.Item1}: {operation.Item2} \n";
             }

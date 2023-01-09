@@ -9,9 +9,11 @@ try
     Console.WriteLine(account1.Deposit(190));
     Console.WriteLine(account1.Withdraw(110));
     Console.WriteLine(account1.Deposit(40));
-    Console.WriteLine("\nAll History");
-    Console.WriteLine(account1.ShowOperations());
-    Console.WriteLine("Filtered history (>=100)");
+    Console.WriteLine("\nFiltered by Withdrawal");
+    Console.WriteLine(account1.ShowOperations("Withdraw"));
+    Console.WriteLine("Filtered by Deposit");
+    Console.WriteLine(account1.ShowOperations("Deposit"));
+    Console.WriteLine("Filtered by value (>=100)");
     Console.WriteLine(account1.ShowOperations(100));
     Console.WriteLine(account1.ShowBalance());
 
